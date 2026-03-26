@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "updated_at": "2026-03-26T07:13:56.786026+00:00",
+  "pages": [
+    {
+      "id": "architecture",
+      "slug": "architecture",
+      "title": "Architecture",
+      "summary": "High-level system architecture and core components.",
+      "pill_tabs": [
+        {
+          "id": "overview",
+          "label": "Overview"
+        },
+        {
+          "id": "components",
+          "label": "Components"
+        },
+        {
+          "id": "deployment",
+          "label": "Deployment"
+        }
+      ],
+      "sections": [
+        {
+          "id": "architecture",
+          "title": "Architecture",
+          "level": 2,
+          "body_markdown": "This page describes the overall architecture of the Predictive Maintenance Management System, including key containers and their responsibilities."
+        },
+        {
+          "id": "core-components",
+          "title": "Core components",
+          "level": 2,
+          "body_markdown": "- **Frontend (Angular):** Docs-style UI (sidebar nav, main content, TOC)\n- **Backend (FastAPI):** REST endpoints for docs navigation/content\n- **Database:** (future) durable storage for equipment telemetry, alerts, and work orders"
+        },
+        {
+          "id": "deployment",
+          "title": "Deployment",
+          "level": 2,
+          "body_markdown": "The system is split into independently deployable services. Environment variables configure base URLs and runtime behavior."
+        }
+      ]
+    },
+    {
+      "id": "user-stories",
+      "slug": "user-stories",
+      "title": "User Stories",
+      "summary": "User stories describing UI flows and API expectations.",
+      "pill_tabs": [],
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Overview",
+          "level": 2,
+          "body_markdown": "This page lists user stories and supporting API surface for documentation-style navigation and content."
+        },
+        {
+          "id": "models",
+          "title": "Models",
+          "level": 2,
+          "body_markdown": "- `DocPage`: id, slug, title, summary\n- `DocSection`: id, title, level, body_markdown\n- `TocItem`: id, title, level (derived from sections)"
+        },
+        {
+          "id": "routes",
+          "title": "Routes",
+          "level": 2,
+          "body_markdown": "- `GET /docs/nav`\n- `GET /docs/pages`\n- `GET /docs/pages/{slug}`\n- `GET /docs/pages/{slug}/toc`"
+        },
+        {
+          "id": "schemas",
+          "title": "Schemas",
+          "level": 2,
+          "body_markdown": "All endpoints return JSON and are documented in OpenAPI."
+        }
+      ]
+    }
+  ]
+}
